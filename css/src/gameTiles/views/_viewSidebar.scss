@@ -1,0 +1,122 @@
+
+
+#viewSidebar {
+
+  width: 342px;
+  height: 100%;
+  
+  background: rgb(50, 50, 50);
+  
+  transform: translateX(-100%);
+
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+
+#viewSidebar.active {
+  transition-timing-function: ease-out;
+  transform: translateX(0);
+}
+
+
+#viewSidebar p,
+#viewSidebar span,
+#viewSidebar li {
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+
+.text-bold {
+  font-weight: bold !important;
+}
+
+
+#viewSidebar header {
+  margin-bottom: calc(28px * 2);
+  position: relative;
+}
+
+
+#viewSidebar header:after {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 1px;
+  background-color: rgb(127, 127, 127);
+  bottom: -28px;
+  left: 0;
+}
+
+
+section:not(:last-of-type) {
+  margin-bottom: 28px;
+}
+
+
+#viewSidebar i {
+  color: #ffad07;
+}
+
+
+#viewSidebar .content-wrapper {
+  
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+#viewSidebar .content-scroll {
+  height: 100%;
+  width: calc(100% + 15px);
+
+  padding: 35px 45px 35px 40px;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* BUTTON */
+#viewSidebar .sidebarButton-wrapper {
+  
+  width: 48px;
+  height: 48px;
+
+  position: absolute;
+
+  top: 38px;
+  right: -88px;
+
+}
+
+
+#viewSidebar #sidebarButton {
+  
+  width: 48px;
+  height: 48px;
+  
+  background-image: url('../images/offCanvasButton.svg');
+  background-repeat: no-repeat;
+  background-position: 2px 1px;
+
+  cursor: pointer;
+
+  transform: rotate(0deg);
+
+  transition: all 0.25s ease-out;
+}
+
+#viewSidebar.active #sidebarButton {
+  transform: rotate(180deg);
+  background-position: 3px 2px;
+}

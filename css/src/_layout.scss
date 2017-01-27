@@ -1,0 +1,83 @@
+
+// LAYOUT defined
+
+
+// Wrapper classes are for layout positioning only.
+
+// Main wrapper class that goes in body.
+.wrapper {
+  // overflow: hidden;
+  // position: relative;
+  // width: $defaultWidth;
+  // height: $defaultHeight;
+  // overflow: hidden;
+  // background: rgba(0, 255, 0, 0.05);
+
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  left: 0;
+  transform-origin: 0 0;
+  transition: all 0.2s ease;
+}
+
+
+
+// wrapper for header or title text
+.header-wrapper {
+
+}
+
+// Wrapper for annotation
+.annotation-wrapper {
+  // position: absolute;
+
+  // width: $defaultWidth;
+  // // height: $defaultHeight;
+  
+  // z-index: 10;
+
+  // // overflow: hidden;
+  // top: 0;
+  // left: 0;
+
+  // border: 1px solid red;
+}
+
+
+// Wraper for content of exercise
+
+.content-wrapper {
+  // position: absolute;
+  // width: $defaultWidth;
+  // height: $defaultHeight;
+  // top: 0px;
+  // left: 0px;
+  // // position: relative;
+  // overflow: hidden;
+  // z-index: 0;
+
+  // background: rgba(255, 0, 0, 0.1);
+
+  // border: 1px solid red;
+  // margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  // width: 1024px;
+  // height: 768px;
+  // width: 900px;
+  // border: 1px solid blue;
+}
+
+// wrapper for stepper
+.stepper-wrapper {
+
+}
+
+
+
+
+// wrapper off-canvas aside
+.aside-wrapper {
+
+}

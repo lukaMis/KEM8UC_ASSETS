@@ -1,0 +1,53 @@
+
+// FONTS IMPORT
+
+// ICON FONT
+@font-face {
+  font-family: 'iRokusPlusIcons';
+  src: url('../fonts/iRokusPlusIcons/iRokusPlusIcons.eot?') format('eot'), 
+    url('../fonts/iRokusPlusIcons/iRokusPlusIcons.woff') format('woff'), 
+    url('../fonts/iRokusPlusIcons/iRokusPlusIcons.ttf')  format('truetype'),
+    url('../fonts/iRokusPlusIcons/iRokusPlusIcons.svg#iRokusPlusIcons') format('svg');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// OPEN SANS
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-Italic.eot");
+  src: url("../fonts/Open_Sans/OpenSans-Italic.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Open_Sans/OpenSans-Italic.woff") format("woff"),url("../fonts/Open_Sans/OpenSans-Italic.ttf") format("truetype"),url("../fonts/Open_Sans/OpenSans-Italic.svg") format("svg");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-Regular.eot");
+  src: url("../fonts/Open_Sans/OpenSans-Regular.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Open_Sans/OpenSans-Regular.woff") format("woff"),url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype"),url("../fonts/Open_Sans/OpenSans-Regular.svg") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-BoldItalic.eot");
+  src: url("../fonts/Open_Sans/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Open_Sans/OpenSans-BoldItalic.woff") format("woff"),url("../fonts/Open_Sans/OpenSans-BoldItalic.ttf") format("truetype"),url("../fonts/Open_Sans/OpenSans-BoldItalic.svg") format("svg");
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/OpenSans-Bold.eot");
+  src: url("../fonts/Open_Sans/OpenSans-Bold.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Open_Sans/OpenSans-Bold.woff") format("woff"),url("../fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype"),url("../fonts/Open_Sans/OpenSans-Bold.svg") format("svg");
+  font-style: normal;
+  font-weight: 700;
+}

@@ -1,0 +1,41 @@
+
+// typography
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+li, 
+span, 
+a {
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  
+  font-size: 21px;
+  line-height: 28px;
+  
+  text-decoration: none;
+
+  color: rgb(127, 127, 127);
+
+  // -webkit-font-smoothing: subpixel-antialiased; // This is default
+  // -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: none;
+
+}
+
+strong {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

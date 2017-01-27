@@ -1,0 +1,24 @@
+
+
+#iconPlayAgain {
+  width: 48px;
+  height: 48px;
+
+  position: absolute;
+  right: 53px;
+  top: 296px;
+
+  background-image: url('../images/iconPlayAgain.svg');
+
+  cursor: pointer;
+
+  transform: scale(0);
+  visibility: hidden;
+
+  transition: all 0.3s ease-out;
+}
+
+#iconPlayAgain.active {
+  transform: scale(1);
+  visibility: visible;
+}

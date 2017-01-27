@@ -1,0 +1,225 @@
+
+
+// PARENT 
+.annotation {
+  width: $defaultWidth;
+  height: $defaultHeight;
+
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+
+  /* No support for these yet, use at own risk */
+  -o-user-select: none;
+  user-select: none;
+
+  transition: transform 0.25s ease-out, opacity 0.35s linear;
+
+  opacity: 0;
+
+  position: absolute;
+
+  // transform: scale(1, 0);
+  transform: translateY(-768px);
+
+  // position: absolute;
+  // z-index: 1;
+  // width: 1024px;
+  // height: 768px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  z-index: 1;
+}
+
+.annotation.active {
+  // transform: scale(1, 1);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+// TEXT
+.annotation-text-wrapper {
+  
+  padding: 24px 32px 32px 32px;
+  
+  width: 770px;
+  
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  transform: translate(-50%, -50%);
+
+  background-color: rgb(0, 0, 0);
+}
+
+.annotation-text-wrapper p, h1 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 8px;
+}
+
+.annotation-text-wrapper h1 {
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.annotation-text-wrapper p:last-of-type {
+  margin-bottom: 0px;
+}
+
+
+
+// OVERLAY
+.annotaton-overlay {
+  // width: 100%;
+  // height: 100%;
+  // width: $defaultWidth;
+  // height: $defaultHeight;
+
+  position: absolute; 
+  top:0; 
+  left: 0; 
+  right:0; 
+  bottom:0;
+
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+// ICON
+$iconWidth: 48px;
+$iconHeight: 48px;
+$bar-thickness: 2px;
+$button-pad: 16px;
+$button-pad-horizontal: 12px;
+$button-pad-vertical: 14px;
+$bar-color: rgb(255, 255, 255);
+$iconTransitionDelay: 0.1s;
+
+
+
+
+
+.icon-annotation {
+  width: $iconWidth;
+  height: $iconHeight;
+
+  background-color: $primaryBlue;
+  border-radius: 50%;
+  overflow: hidden;
+  
+  position: absolute;
+  left: 50%;
+  top: 40px;
+
+  transform: translateX(-50%);
+  // transform: translateX(-50%) rotate(0deg);
+
+  z-index: 12;
+
+  cursor: pointer;
+
+  transition: all 0.1s ease;
+}
+
+// .icon-annotation:active {
+//   background-color: $primaryBlueDark;
+//   // transform: translateX(-50%) rotate(25deg);
+// }
+
+.icon-annotation:hover {
+  background-color: $primaryBlueDark;
+}
+
+// .icon-annotation:focus { 
+//   background-color: $primaryBlue;
+// }
+// .icon-annotation:active { 
+//   background-color: $primaryBlue;
+// }
+
+
+
+// ANNOTATION LINES AND X
+.icon-annotation .icon-annotation-line {
+  position: absolute;
+  top: ($iconHeight / 2) - ($bar-thickness / 2);
+  left: $button-pad-horizontal;
+  right: $button-pad-horizontal;
+  height: $bar-thickness;
+  background: $bar-color;
+}
+
+.icon-annotation .icon-annotation-line::before, 
+.icon-annotation .icon-annotation-line::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: $bar-thickness;
+  background-color: $bar-color;
+  left: 0;
+  width: 100%;
+}
+
+.icon-annotation .icon-annotation-line::before {
+  top: -( ($iconHeight / 2) - ($bar-thickness / 2) - $button-pad-vertical);
+}
+
+.icon-annotation .icon-annotation-line::after {
+  bottom: -( ($iconHeight / 2) - ($bar-thickness / 2) - $button-pad-vertical);
+}
+
+
+
+/* Toggle X */
+.icon-annotation .icon-annotation-line {
+  transition: background 0s linear $iconTransitionDelay;
+}
+
+.icon-annotation .icon-annotation-line::before {
+  transition-property: top, transform;
+}
+
+.icon-annotation .icon-annotation-line::after {
+  transition-property: bottom, transform;
+}
+
+.icon-annotation .icon-annotation-line::before, 
+.icon-annotation .icon-annotation-line::after {
+  transition-duration: $iconTransitionDelay, $iconTransitionDelay;
+  transition-delay: $iconTransitionDelay, 0s;
+}
+
+
+/* Toggle X ACTIVE */
+
+.icon-annotation.active {
+  background-color: $primaryBlueDark;
+}
+
+.icon-annotation.active .icon-annotation-line {
+  background: none;
+}
+
+.icon-annotation.active .icon-annotation-line::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.icon-annotation.active .icon-annotation-line::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.icon-annotation.active .icon-annotation-line::before,
+.icon-annotation.active .icon-annotation-line::after {
+  transition-delay: 0s, $iconTransitionDelay;
+}

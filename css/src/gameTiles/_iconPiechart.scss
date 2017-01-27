@@ -1,0 +1,49 @@
+
+#Piechart {
+  width: 48px;
+  height: 48px;
+
+  position: absolute;
+  right: 53px;
+  top: 296px;
+
+  overflow: hidden;
+  border-radius: 50%;
+
+  transform: scale(0);
+  visibility: hidden;
+
+  background-color: rgba(50, 50, 50, 1);
+
+  transition: all 0.3s ease-out;
+}
+
+#Piechart.active {
+  transform: scale(1);
+  visibility: visible;
+}
+
+#Piechart canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#Piechart:after {
+  content: "";
+
+  position: absolute;
+
+  width: 20px;
+  height: 20px;
+
+  // background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(50, 50, 50, 1);
+
+  border-radius: 50%;
+  
+  top: 50%;
+  left: 50%;
+    
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,99 @@
+
+/*
+
+body.loading {
+  pointer-events: none;
+
+  &:after {
+  content: " ";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgba(255, 255, 255, 0) url(../../assets/images/loader.gif) no-repeat center center;
+  z-index: 9999;
+  }
+}
+
+*/
+
+$preloaderColor : #fecb2f;
+
+body.loading:after {
+  content: "";
+
+  width: 1em;
+  height: 1em;
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  
+  border-radius: 50%;
+
+  z-index: 9;
+
+  transform: translateZ(0) translate(-50%, -50%) rotate(0deg);
+
+  -webkit-animation: loadAnimation 1.8s infinite ease;
+  animation: loadAnimation 1.8s infinite ease;
+}
+
+@-webkit-keyframes loadAnimation {
+  0% {
+    -webkit-transform: translateZ(0) translate(-50%, -50%) rotate(0deg);
+    transform: translateZ(0) translate(-50%, -50%) rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, 0 -0.83em 0 -0.42em $preloaderColor, 0 -0.83em 0 -0.44em $preloaderColor, 0 -0.83em 0 -0.46em $preloaderColor, 0 -0.83em 0 -0.477em $preloaderColor;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, 0 -0.83em 0 -0.42em $preloaderColor, 0 -0.83em 0 -0.44em $preloaderColor, 0 -0.83em 0 -0.46em $preloaderColor, 0 -0.83em 0 -0.477em $preloaderColor;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, -0.087em -0.825em 0 -0.42em $preloaderColor, -0.173em -0.812em 0 -0.44em $preloaderColor, -0.256em -0.789em 0 -0.46em $preloaderColor, -0.297em -0.775em 0 -0.477em $preloaderColor;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, -0.338em -0.758em 0 -0.42em $preloaderColor, -0.555em -0.617em 0 -0.44em $preloaderColor, -0.671em -0.488em 0 -0.46em $preloaderColor, -0.749em -0.34em 0 -0.477em $preloaderColor;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, -0.377em -0.74em 0 -0.42em $preloaderColor, -0.645em -0.522em 0 -0.44em $preloaderColor, -0.775em -0.297em 0 -0.46em $preloaderColor, -0.82em -0.09em 0 -0.477em $preloaderColor;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translate(-50%, -50%) rotate(360deg);
+    transform: translateZ(0) translate(-50%, -50%) rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, 0 -0.83em 0 -0.42em $preloaderColor, 0 -0.83em 0 -0.44em $preloaderColor, 0 -0.83em 0 -0.46em $preloaderColor, 0 -0.83em 0 -0.477em $preloaderColor;
+  }
+}
+@keyframes loadAnimation {
+  0% {
+    -webkit-transform: translateZ(0) translate(-50%, -50%) rotate(0deg);
+    transform: translateZ(0) translate(-50%, -50%) rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, 0 -0.83em 0 -0.42em $preloaderColor, 0 -0.83em 0 -0.44em $preloaderColor, 0 -0.83em 0 -0.46em $preloaderColor, 0 -0.83em 0 -0.477em $preloaderColor;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, 0 -0.83em 0 -0.42em $preloaderColor, 0 -0.83em 0 -0.44em $preloaderColor, 0 -0.83em 0 -0.46em $preloaderColor, 0 -0.83em 0 -0.477em $preloaderColor;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, -0.087em -0.825em 0 -0.42em $preloaderColor, -0.173em -0.812em 0 -0.44em $preloaderColor, -0.256em -0.789em 0 -0.46em $preloaderColor, -0.297em -0.775em 0 -0.477em $preloaderColor;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, -0.338em -0.758em 0 -0.42em $preloaderColor, -0.555em -0.617em 0 -0.44em $preloaderColor, -0.671em -0.488em 0 -0.46em $preloaderColor, -0.749em -0.34em 0 -0.477em $preloaderColor;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, -0.377em -0.74em 0 -0.42em $preloaderColor, -0.645em -0.522em 0 -0.44em $preloaderColor, -0.775em -0.297em 0 -0.46em $preloaderColor, -0.82em -0.09em 0 -0.477em $preloaderColor;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translate(-50%, -50%) rotate(360deg);
+    transform: translateZ(0) translate(-50%, -50%) rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em $preloaderColor, 0 -0.83em 0 -0.42em $preloaderColor, 0 -0.83em 0 -0.44em $preloaderColor, 0 -0.83em 0 -0.46em $preloaderColor, 0 -0.83em 0 -0.477em $preloaderColor;
+  }
+}
